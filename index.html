@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phone hunter api.</title>
+  <!-- daisy ui and talwind css cdn. -->
+
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.3/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+
+  <header class=" container mx-auto bg-gray-400 flex-col lg:flex-row py-4 flex justify-center items-center gap-5">
+    <input onkeyup="validation()" id="inputFild" class="bg-white text-lg lg:text-2xl px-2 py-1 lg:py-3 w-[60%]" placeholder="Enter phone name." type="text">
+    <button  id="searchButton" onclick="btnClicked()" class="btn btn-success ">Search</button>
+  </header>
+
+  <!-- this is body section. -->
+  <div id="Spinner" class=" hidden mt-60 text-center"><span class=" loading loading-dots loading-lg"></span></div>
+
+  <section id="body" class="grid grid-cols-1 lg:grid-cols-4 gap-3 container box-border mx-auto mt-16 border-2">
+
+
+
+
+   <section class="col-span-full text-center font-extrabold text-xl lg:text-4xl text-yellow-400 bg-emerald-600 py-4">
+    <h1>
+      search only <span class="text-white">huawei,samsung,oppo and apple </span> brands any smart phone by entering there brand name or model name and get their specification.
+    </h1>
+   </section>
+
+
+
+
+
+  </section>
+
+  <div class="text-center my-9"><button onclick="showall()" id="ShowAllBtn" class=" hidden btn btn-warning">Show
+      All</button></div>
+
+
+  <!-- You can open the modal using ID.showModal() method -->
+
+  <dialog id="my_modal_4" class="modal">
+    <form method="dialog" class="modal-box w-11/12 max-w-5xl">
+      <section id="singlePhoneDataContainer">
+
+      </section>
+      <div class="modal-action">
+        <!-- if there is a button, it will close the modal -->
+        <button class="btn">Close</button>
+      </div>
+    </form>
+  </dialog>
+
+
+  <script src="main.js"></script>
+</body>
+
+</html>
